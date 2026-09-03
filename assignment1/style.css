@@ -1,0 +1,370 @@
+/* ================= BASIC ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #050505;
+    color: white;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    height: 96px;
+    width: 100%;
+
+    background: #050505;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 5.5%;
+    gap: 30px;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    min-width: 145px;
+}
+
+.logo-icon {
+    font-size: 42px;
+    font-weight: bold;
+
+    transform: rotate(-45deg);
+}
+
+.logo span {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+/* VERTICAL LINE */
+
+.line {
+    height: 56px;
+    width: 2px;
+
+    background: white;
+
+    margin-right: 30px;
+}
+
+
+/* NAVIGATION */
+
+nav {
+    display: flex;
+    align-items: center;
+
+    gap: 55px;
+
+    flex: 1;
+}
+
+nav a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 17px;
+    font-weight: 600;
+}
+
+nav a span {
+    margin-left: 5px;
+    font-size: 18px;
+}
+
+
+/* BUY BUTTON */
+
+.buy-btn {
+    border: none;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #b500d4,
+        #e000e9
+    );
+
+    padding: 13px 30px;
+
+    border-radius: 7px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+
+    min-height: calc(100vh - 96px);
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    /*
+       Yaha tumhari image use hogi
+       images folder ke andar hero.jpg
+    */
+
+    background-image: url("./bg.png");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+/* HERO DARK OVERLAY */
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(40, 5, 65, 0.12);
+}
+
+
+/* HERO CONTENT */
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    padding-top: 185px;
+}
+
+
+/* HEADING */
+
+h1 {
+
+    font-size: clamp(
+        48px,
+        5.7vw,
+        86px
+    );
+
+    line-height: 1.15;
+
+    font-weight: 800;
+
+    letter-spacing: -2px;
+}
+
+
+/* PARAGRAPH */
+
+p {
+
+    margin-top: 20px;
+
+    font-size: clamp(
+        22px,
+        2vw,
+        34px
+    );
+
+    font-weight: 500;
+}
+
+
+/* ACCESS BUTTON */
+
+.access-btn {
+
+    margin-top: 10px;
+    
+   
+
+    padding: 20px 32px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: linear-gradient(
+        135deg,
+        #b900d7,
+        #e000e9
+    );
+
+    color: white;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* HOVER EFFECT */
+
+.buy-btn:hover,
+.access-btn:hover {
+
+    transform: translateY(-2px);
+
+    filter: brightness(1.1);
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+
+        padding: 0 20px;
+
+        gap: 15px;
+    }
+
+    .line {
+
+        margin-right: 5px;
+    }
+
+    nav {
+
+        gap: 20px;
+    }
+
+    nav a {
+
+        font-size: 14px;
+    }
+
+    .buy-btn {
+
+        padding: 11px 15px;
+    }
+
+    .hero-content {
+
+        padding-top: 120px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .navbar {
+
+        height: auto;
+
+        min-height: 80px;
+
+        flex-wrap: wrap;
+
+        padding: 15px;
+    }
+
+    .line {
+
+        display: none;
+    }
+
+    nav {
+
+        order: 3;
+
+        width: 100%;
+
+        overflow-x: auto;
+
+        padding-bottom: 5px;
+    }
+
+    nav a {
+
+        font-size: 13px;
+    }
+
+    .hero {
+
+        min-height: calc(100vh - 120px);
+    }
+
+    .hero-content {
+
+        padding: 100px 18px 40px;
+    }
+
+    h1 {
+
+        font-size: 45px;
+
+        letter-spacing: -1px;
+    }
+
+    p {
+
+        font-size: 19px;
+    }
+
+    .access-btn {
+    margin-top: 25px;
+
+    padding: 20px 32px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: linear-gradient(
+        135deg,
+        #b900d7,
+        #e000e9
+    );
+
+    color: white;
+
+    font-size: 25px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+}
