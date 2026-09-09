@@ -132,10 +132,7 @@ nav a span {
 
     overflow: hidden;
 
-    /*
-       Yaha tumhari image use hogi
-       images folder ke andar hero.jpg
-    */
+
 
     background-image: url("./bg.png");
 
